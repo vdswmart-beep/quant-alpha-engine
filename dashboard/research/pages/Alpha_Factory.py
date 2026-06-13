@@ -60,7 +60,7 @@ st.dataframe(
         "score",
         ascending=False
     ),
-    use_container_width=True
+    width="stretch"
 )
 
 # ============================================================
@@ -101,7 +101,7 @@ fig.update_layout(
 
 st.plotly_chart(
     fig,
-    use_container_width=True
+    width="stretch"
 )
 
 # ============================================================
@@ -131,5 +131,5 @@ fig = px.bar(
 
 st.plotly_chart(
     fig,
-    use_container_width=True
+    width="stretch"
 )

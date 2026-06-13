@@ -79,7 +79,7 @@ fig.update_layout(
 
 st.plotly_chart(
     fig,
-    use_container_width=True
+    width="stretch"
 )
 
 st.subheader(
@@ -91,5 +91,5 @@ st.dataframe(
         "score",
         ascending=False
     ),
-    use_container_width=True
+    width="stretch"
 )

@@ -10,14 +10,17 @@ df = pd.read_csv(
 
 st.dataframe(df)
 
+x_col = "alpha" if "alpha" in df.columns else df.columns[0]
+y_col = "crowding_score" if "crowding_score" in df.columns else df.columns[1]
+
 fig = px.bar(
     df,
-    x="strategy",
-    y="crowding_score",
+    x=x_col,
+    y=y_col,
     title="Crowding Scores"
 )
 
 st.plotly_chart(
     fig,
-    use_container_width=True
+    width="stretch"
 )

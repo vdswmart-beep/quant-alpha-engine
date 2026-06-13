@@ -15,7 +15,7 @@ df = pd.read_csv(
 
 st.dataframe(
     df,
-    use_container_width=True
+    width="stretch"
 )
 
 fig = px.bar(
@@ -26,7 +26,7 @@ fig = px.bar(
 
 st.plotly_chart(
     fig,
-    use_container_width=True
+    width="stretch"
 )
 
 if "slippage_bps" in df.columns:
@@ -39,5 +39,5 @@ if "slippage_bps" in df.columns:
 
     st.plotly_chart(
         fig2,
-        use_container_width=True
+        width="stretch"
     )

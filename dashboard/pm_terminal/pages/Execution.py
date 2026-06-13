@@ -20,5 +20,5 @@ if "slippage" in df.columns:
 
     st.plotly_chart(
         fig,
-        use_container_width=True
+        width="stretch"
     )

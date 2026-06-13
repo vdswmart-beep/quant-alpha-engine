@@ -10,14 +10,17 @@ df = pd.read_csv(
 
 st.dataframe(df)
 
+x_col = "alpha" if "alpha" in df.columns else df.columns[0]
+y_col = "ic" if "ic" in df.columns else df.columns[1]
+
 fig = px.bar(
     df,
-    x="alpha",
-    y="score",
-    color="ic"
+    x=x_col,
+    y=y_col,
+    title="Information Coefficient by Alpha"
 )
 
 st.plotly_chart(
     fig,
-    use_container_width=True
+    width="stretch"
 )

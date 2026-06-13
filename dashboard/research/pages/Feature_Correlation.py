@@ -125,7 +125,7 @@ fig.update_layout(
 
 st.plotly_chart(
     fig,
-    use_container_width=True
+    width="stretch"
 )
 
 # ==========================================================
@@ -180,7 +180,7 @@ st.dataframe(
         ]
     ].head(25),
 
-    use_container_width=True
+    width="stretch"
 
 )
 

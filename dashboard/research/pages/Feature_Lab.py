@@ -10,6 +10,11 @@ df = pd.read_csv(
     "outputs/feature_store.csv"
 )
 
+# ── FIX: if ticker is the index, bring it into columns ──
+if "ticker" not in df.columns:
+    df = df.reset_index().rename(columns={"index": "ticker"})
+# ─────────────────────────────────────────────────────────
+
 st.dataframe(df)
 
 feature = st.selectbox(
@@ -33,7 +38,7 @@ fig = px.bar(
 
 st.plotly_chart(
     fig,
-    use_container_width=True
+    width="stretch"
 )
 
 feature_stats = pd.DataFrame({
