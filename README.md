@@ -147,7 +147,7 @@ All results are saved automatically in `outputs/`:
 
 ## Background
 
-Built during a Global Markets trainee program at a tier-1 investment bank, alongside live exposure to equity derivatives, structured products and fixed income trading desks. Designed to reflect institutional alpha research workflows (WorldQuant / Two Sigma style expression-based alpha mining) with rigorous out-of-sample validation.
+Built independently as a personal learning project to develop the quantitative and coding skills required for a career in equity trading
 
 ---
 
